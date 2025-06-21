@@ -2,10 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import os
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)  # Clé de session
+app.secret_key = os.urandom(24)
 
-# Définir ici le mot de passe à valider
-PASSWORD = "monmotdepasse"
+PASSWORD = "monmotdepasse"  # Remplace par ton mot de passe
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
