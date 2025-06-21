@@ -1,38 +1,69 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
+    background: #fdfdfd;
     color: #333;
 }
 
-.login-container, .landing-container {
-    max-width: 400px;
-    margin: 10% auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.banner {
+    background: url("{{ url_for('static', filename='images/banner.jpg') }}") center/cover no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
+}
+
+.intro-image img {
+    max-width: 300px;
+    margin-right: 30px;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.modules {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
     text-align: center;
 }
 
-input[type="password"] {
-    padding: 0.5rem;
-    width: 80%;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.module {
+    flex: 1 1 250px;
+    max-width: 300px;
+    margin: 20px;
 }
 
-button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #4caf50;
+.module img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.module h3 {
+    color: #7b5e3b;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #7b5e3b;
     color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.error {
-    color: red;
-    font-size: 0.9em;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: bold;
 }
